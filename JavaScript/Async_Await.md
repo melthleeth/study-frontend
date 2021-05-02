@@ -4,7 +4,7 @@
 
 - error handling은 try catch 구문으로 할 수 있다.
 
-- 단점은 만약 await 수가 상당히 많아진다면 각 `await`들은 이전 await가 끝날때 까지 기다려야 해서 코드가 느려질ㅈ 수 있다는 점이다.
+- 단점은 만약 await 수가 상당히 많아진다면 각 `await`들은 이전 await가 끝날때 까지 기다려야 해서 코드가 느려질 수 있다는 점이다.
 
 ([공식문서](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await) 참고하여 더 수정 필요)
 
