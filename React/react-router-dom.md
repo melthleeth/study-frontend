@@ -17,7 +17,7 @@
 ```
 
 ```javascript
-<Route path="//payment/:employeeNum/:userId" component={PaymentDetailPage}>
+<Route path="/payment/:employeeNum/:userId" component={PaymentDetailPage}>
 ```
 
 ### 숨겨서 전달하기
