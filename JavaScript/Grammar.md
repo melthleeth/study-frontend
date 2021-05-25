@@ -4,9 +4,9 @@
 
 [ES6 Arrow Functions](#es6-arrow-functions)
 
-[Exports & Imports](#exports-imports)
+[Exports & Imports](#exports--imports)
 
-[Spread & Rest Operator](#spread-rest-operator)
+[Spread & Rest Operator](#spread--rest-operator)
 
 [Destructuring](#destructuring)
 
