@@ -1,3 +1,67 @@
+## ES6 Arrow Functions
+
+- 함수를 정의하는 또 다른 방법
+
+- 짧아진 syntax로 간편하지만 기존 함수와 몇 가지 차이점과 한계가 있다.
+
+  - `this`나 `super`로의 binding이 존재하지 않으며 `method`로 사용되어선 안된다.
+   *methods란?*
+
+    ```javascript
+    const obj = {
+      foo() {
+        return 'bar';
+      }
+    };
+
+    console.log(obj.foo());
+    // expected output: "bar"
+    ```
+
+  - `argument`나 `new.target` 키워드가 없다.
+
+  - `scope` 생성에 의존하는 `call`, `apply`, `bind` method에 적합하지 않다.
+
+  - 생성자 (constructor)로 사용되면 안된다.
+
+  - body 안에서 `yield`를 사용하면 안된다.
+
+### Arrow Function으로 바꾸는 과정
+
+```javascript
+function getLength(material) {
+  return material.length;
+}
+```
+
+```javascript
+const getLength: function(material) {
+  return material.length;
+}
+```
+
+```javascript
+const getLength = (material) => {material.length;}
+```
+
+- 만약 하나의 `argument`만 있다면 괄호를 생략할 수 있다.
+
+
+### 예제
+
+```javascript
+const materials = [
+  'Hydrogen',
+  'Helium',
+  'Lithium',
+  'Beryllium'
+];
+
+console.log(materials.map(material => material.length));
+// expected output: Array [8, 6, 7, 9]
+```
+
+
 ## Spread & Rest Operator
 
 - `...` 를 통해 기존 array에 원소를 합칠 수 있다.
