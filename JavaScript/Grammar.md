@@ -5,13 +5,13 @@
 - 짧아진 syntax로 간편하지만 기존 함수와 몇 가지 차이점과 한계가 있다.
 
   - `this`나 `super`로의 binding이 존재하지 않으며 `method`로 사용되어선 안된다.
-   *methods란?*
+    _methods란?_
 
     ```javascript
     const obj = {
       foo() {
-        return 'bar';
-      }
+        return "bar";
+      },
     };
 
     console.log(obj.foo());
@@ -41,26 +41,33 @@ const getLength: function(material) {
 ```
 
 ```javascript
-const getLength = (material) => {material.length;}
+const getLength = (material) => {
+  material.length;
+};
 ```
 
 - 만약 하나의 `argument`만 있다면 괄호를 생략할 수 있다.
 
+- 단순하게 값을 리턴하면 중괄호와 세미콜론을 생략할 수 있다.
+
+```javascript
+const getLength = (material) => material.length;
+```
+
+- 전달할 `argument`가 없다면 빈 괄호를 두면 된다.
+
+```javascript
+const print = () => console.log("result");
+```
 
 ### 예제
 
 ```javascript
-const materials = [
-  'Hydrogen',
-  'Helium',
-  'Lithium',
-  'Beryllium'
-];
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
-console.log(materials.map(material => material.length));
+console.log(materials.map((material) => material.length));
 // expected output: Array [8, 6, 7, 9]
 ```
-
 
 ## Spread & Rest Operator
 
